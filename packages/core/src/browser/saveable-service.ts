@@ -174,7 +174,7 @@ export class SaveableService implements FrontendApplicationContribution {
         setDirty(saveableWidget, saveable.dirty);
         saveable.onDirtyChanged(() => setDirty(saveableWidget, saveable.dirty));
         const closeWithSaving = this.createCloseWithSaving();
-        const closeWithoutSaving = () => this.closeWithoutSaving(saveableWidget, false);
+        const closeWithoutSaving = () => this.closeWithoutSaving(saveableWidget, true);
         Object.assign(saveableWidget, {
             closeWithoutSaving,
             closeWithSaving,
