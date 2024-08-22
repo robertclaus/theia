@@ -304,6 +304,11 @@ export class NotebookActionsContribution implements CommandContribution, MenuCon
             label: nls.localizeByDefault('Markdown'),
             icon: codicon('add'),
         });
+        menus.registerMenuAction(NotebookMenus.NOTEBOOK_MAIN_TOOLBAR_CELL_ADD_GROUP, {
+            commandId: NotebookCommands.ADD_NEW_MARKDOWN_CELL_COMMAND.id,
+            label: nls.localizeByDefault('Control'),
+            icon: codicon('add'),
+        });
 
         // Execution related items
         menus.registerSubmenu(NotebookMenus.NOTEBOOK_MAIN_TOOLBAR_EXECUTION_GROUP, 'Cell Execution', { role: CompoundMenuNodeRole.Group });
